@@ -26,14 +26,14 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y  # Set right side as central BLE role
 
 config ZMK_SPLIT_ROLE
-    default "central"  # Explicitly set right side as master for wired connection
+    default y  # Explicitly set right side as master for wired connection
 
 endif
 
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_SPLIT_ROLE
-    default "peripheral"  # Set left side as peripheral for wired connection
+    default n  # Set left side as peripheral for wired connection
 
 endif
 
