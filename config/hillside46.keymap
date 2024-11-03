@@ -113,8 +113,8 @@
 
             bindings = <
 &kp INS  &kp EXCL  &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH                                          &kp CARET   &kp AMPS      &kp ASTRK     &kp DOLLAR  &kp PERCENT  &kp DEL
-&kp SQT  &kp BSLH  &kp MINUS  &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL                                         &kp HOME    &kp RSHFT     &kp RCTRL     &kp LALT    &kp RGUI     &kp END
-&trans   &kp PIPE  &kp UNDER  &kp LBRC              &kp RBRC               &kp UNDER  &sk RALT                    &kp K_APP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP    &none        &kp RCTRL
+&kp SQT  &kp BSLH  &kp MINUS  &kp LBKT              &kp RIGHT_BRACKET      &kp EQUAL                                         &kp HOME    &kp RSHFT     &kp RCTRL     &kp LALT    &kp RGUI     &kp DOUBLE_QUOTES
+&trans   &kp PIPE  &kp UNDER  &kp LBRC              &kp RBRC               &kp UNDER  &sk RALT                    &kp K_APP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP    &none        &trans
                                                     &trans                 &trans     &mo 5     &trans    &trans  &trans     &trans      &trans
             >;
 
