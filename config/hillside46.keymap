@@ -23,6 +23,8 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+&sk { quick-release; };
+
 / {
     behaviors {
         new_behavior: new_behavior {
