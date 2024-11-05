@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFTCAPS";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
+            bindings = <&stickyMods LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
         stickyMods: stickyMods {
