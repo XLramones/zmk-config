@@ -33,6 +33,16 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
+
+        stickyMods: stickyMods {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKYMODS";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            lazy;
+            ignore-modifiers;
+            release-after-ms = <1500>;
+        };
     };
 
     keymap {
@@ -86,10 +96,10 @@
  */
 
             bindings = <
-&kp Copy  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                                         &kp N6     &kp N7    &kp N8  &kp N9    &kp N0     &trans
-&kp Cut   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp END                                        &kp PG_UP  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &kp PG_DN
-&trans    &kp F1    &kp F2    &kp F3     &kp F4     &kp F5   &kp Undo                    &kp Redo  &kp F6     &kp F7    &kp F8  &kp F9    &kp F10    &kp RCTRL
-                                         &trans     &trans   &trans    &trans    &trans  &mo 4     &trans     &trans
+&kp Copy  &kp N1            &kp N2            &kp N3             &kp N4     &kp N5                                         &kp N6     &kp N7    &kp N8  &kp N9    &kp N0     &trans
+&kp Cut   &stickyMods LGUI  &stickyMods LALT  &stickyMods LCTRL  &kp LSHFT  &kp END                                        &kp PG_UP  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &kp PG_DN
+&trans    &kp F1            &kp F2            &kp F3             &kp F4     &kp F5   &kp Undo                    &kp Redo  &kp F6     &kp F7    &kp F8  &kp F9    &kp F10    &kp RCTRL
+                                                                 &trans     &trans   &trans    &trans    &trans  &mo 4     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -105,10 +115,10 @@
  */
 
             bindings = <
-&kp INS    &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp PLUS                                          &kp CARET   &kp AMPS      &kp AT_SIGN   &kp DOLLAR  &kp HASH  &kp DEL
-&kp TILDE  &kp BSLH  &kp LBKT              &kp RBKT               &kp MINUS     &kp EQUAL                                         &kp HOME    &kp RSHFT     &kp RCTRL     &kp LALT    &kp RGUI  &kp GRAVE
-&trans     &kp PIPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT   &kp UNDER  &sk RALT                    &kp K_APP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP    &none     &trans
-                                                                  &trans        &trans     &mo 4     &trans    &trans  &trans     &trans      &trans
+&kp INS    &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp PLUS                                          &kp CARET    &kp KP_NUMBER_7          &kp KP_NUMBER_8          &kp KP_NUMBER_9          &kp HASH         &kp DEL
+&kp TILDE  &kp BSLH  &kp LBKT              &kp RBKT               &kp MINUS     &kp EQUAL                                         &kp DOLLAR   &stickyMods KP_NUMBER_4  &stickyMods KP_NUMBER_5  &stickyMods KP_NUMBER_6  &kp KP_NUMBER_0  &kp GRAVE
+&trans     &kp PIPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT   &kp UNDER  &sk RALT                    &kp K_APP  &kp AT_SIGN  &kp KP_NUMBER_1          &kp KP_NUMBER_2          &kp KP_NUMBER_3          &kp AMPERSAND    &trans
+                                                                  &trans        &trans     &mo 4     &trans    &trans  &trans     &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
