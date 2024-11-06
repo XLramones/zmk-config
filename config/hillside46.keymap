@@ -60,7 +60,7 @@
             bindings = <
 &kp ESC    &kp Q  &kp W        &kp E         &kp R          &kp T                                                     &kp Y      &kp U     &kp I      &kp O    &kp P      &kp BSPC
 &kp TAB    &kp A  &kp S        &kp D         &kp F          &kp G                                                     &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp ENTER
-&kp LCTRL  &kp Z  &mt K_CUT X  &mt K_COPY C  &mt K_PASTE V  &kp B         &mo 5                           &caps_word  &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp SQT
+&kp LCTRL  &kp Z  &mt K_CUT X  &mt K_COPY C  &mt K_PASTE V  &kp B         &none                           &caps_word  &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp SQT
                                              &kp LGUI       &kp LEFT_ALT  &mo 2  &shiftCaps    &kp SPACE  &mo 3       &kp RCTRL  &kp RGUI
             >;
 
@@ -96,10 +96,10 @@
  */
 
             bindings = <
-&kp Copy  &kp N1            &kp N2            &kp N3             &kp N4     &kp N5                                         &kp N6     &kp N7    &kp N8  &kp N9    &kp N0     &trans
-&kp Cut   &stickyMods LGUI  &stickyMods LALT  &stickyMods LCTRL  &kp LSHFT  &kp END                                        &kp PG_UP  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &kp PG_DN
-&trans    &kp F1            &kp F2            &kp F3             &kp F4     &kp F5   &kp Undo                    &kp Redo  &kp F6     &kp F7    &kp F8  &kp F9    &kp F10    &kp RCTRL
-                                                                 &trans     &trans   &trans    &trans    &trans  &mo 4     &trans     &trans
+&kp Copy  &kp N1            &kp N2            &kp N3             &kp N4     &kp N5                                    &kp N6     &kp N7    &kp N8  &kp N9    &kp N0     &trans
+&kp Cut   &stickyMods LGUI  &stickyMods LALT  &stickyMods LCTRL  &kp LSHFT  &kp END                                   &kp PG_UP  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &kp PG_DN
+&trans    &kp F1            &kp F2            &kp F3             &kp F4     &kp F5   &none                     &none  &kp F6     &kp F7    &kp F8  &kp F9    &kp F10    &kp RCTRL
+                                                                 &trans     &trans   &trans  &trans    &trans  &mo 4  &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -115,10 +115,10 @@
  */
 
             bindings = <
-&trans     &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp PLUS                                          &kp CARET    &kp N7  &kp N8  &kp N9  &kp HASH       &kp DEL
-&kp TILDE  &kp BSLH  &kp LBKT              &kp RBKT               &kp MINUS     &kp EQUAL                                         &kp DOLLAR   &kp N4  &kp N5  &kp N6  &kp N0         &kp GRAVE
-&trans     &kp PIPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT   &kp UNDER  &sk RALT                    &kp K_APP  &kp AT_SIGN  &kp N1  &kp N2  &kp N3  &kp AMPERSAND  &trans
-                                                                  &trans        &trans     &mo 4     &trans    &trans  &trans     &trans       &trans
+&trans     &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp PLUS                                       &kp CARET    &kp N7  &kp N8  &kp N9  &kp HASH       &kp DEL
+&kp TILDE  &kp BSLH  &kp LBKT              &kp RBKT               &kp MINUS     &kp EQUAL                                      &kp DOLLAR   &kp N4  &kp N5  &kp N6  &kp N0         &kp GRAVE
+&trans     &kp PIPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT   &kp UNDER  &none                    &kp K_APP  &kp AT_SIGN  &kp N1  &kp N2  &kp N3  &kp AMPERSAND  &trans
+                                                                  &trans        &trans     &mo 4  &trans    &trans  &trans     &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -134,10 +134,10 @@
  */
 
             bindings = <
-&none       &to 0     &none     &none      &none       &none                                       &none   &kp F11   &kp F12   &kp PRINTSCREEN  &none  &none
-&sys_reset  &none     &none     &none      &none       &none                                       &none   &mkp MB1  &mkp MB2  &none            &none  &sys_reset
-&none       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none   &kp CAPS                    &none   &none   &none     &none     &none            &none  &bootloader
-                                           &trans      &trans  &trans    &trans    &trans  &trans  &trans  &trans
+&none       &to 0     &none     &none      &none       &none                                     &none   &kp F11   &kp F12   &kp PRINTSCREEN  &none  &none
+&sys_reset  &none     &none     &none      &none       &none                                     &none   &mkp MB1  &mkp MB2  &none            &none  &sys_reset
+&none       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none   &mo 5                     &none   &none   &none     &none     &none            &none  &bootloader
+                                           &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
