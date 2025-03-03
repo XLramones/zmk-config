@@ -48,6 +48,7 @@
             lazy;
             ignore-modifiers;
             release-after-ms = <1500>;
+            quick-release;
         };
     };
 
